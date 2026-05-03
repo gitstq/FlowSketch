@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlowSketch - Online Diagram Editor</title>
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Top toolbar -->
+    <div id="toolbar" class="toolbar"></div>
+
+    <!-- Main content area -->
+    <div id="main-content" class="main-content">
+      <!-- Left sidebar: shape palette -->
+      <div id="sidebar" class="sidebar"></div>
+
+      <!-- Canvas area -->
+      <div id="canvas-container" class="canvas-container">
+        <canvas id="main-canvas"></canvas>
+      </div>
+
+      <!-- Right properties panel -->
+      <div id="properties-panel" class="properties-panel"></div>
+
+      <!-- Code editor panel (toggleable) -->
+      <div id="code-panel" class="code-panel" style="display:none;">
+        <div class="code-panel-header">
+          <span>Code Editor</span>
+          <button id="code-panel-close" class="btn-icon" title="Close">&times;</button>
+        </div>
+        <textarea id="code-editor" class="code-editor" spellcheck="false" placeholder="Enter diagram code here..."></textarea>
+        <button id="code-render-btn" class="btn code-render-btn">Render</button>
+      </div>
+
+      <!-- Minimap -->
+      <div id="minimap" class="minimap">
+        <canvas id="minimap-canvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
